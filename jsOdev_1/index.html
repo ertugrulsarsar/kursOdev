@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Javascript Odev 1</title>
-</head>
-<body>
-    <h1>Javascript Odev</h1>
-    <button ></button>
-
-
+  </head>
+  <body>
+    <h1>Javascript Odev 1</h1>
+    <hr />
+    <h1>1-Kullanıcının adını isteme</h1>
+    <h1>Adınızı Girin</h1>
+    <input type="text" id="userName" placeholder="Adınızı girin" />
+    <button onclick="sayHi()">Gönder</button>
+    <hr />
+    <h1>2-Kullanıcının yaşını bulma</h1>
+    <h1>Doğum Tarihinizi Girin</h1>
+    <input type="number" id="resultAge" placeholder="Doğum Yılınızı Girin" />
+    <button onclick="findAge()">Hesapla</button>
+    <hr />
+    <h1>3-Kare çevresini bulma</h1>
+    <h1>Bir Kenar Uzunluğu Girin</h1>
+    <input type="number" id="kareCevre" placeholder="Kenar Uzunluğu (CM)" />
+    <button onclick="findKareCevre()">Hesapla</button>
+    <hr />
+    <h1>4-Dairenin alanını bulma</h1>
+    <h1>Yarı Çap Girerek Dairenin Alanını Bulma</h1>
+    <input type="number" id="daireAlan" placeholder="Yarı Çapı Girin" />
+    <button onclick="findDaireAlan()">Hesapla</button>
+    <hr />
+    <h1>5-Kullanıcının yapması gereken hızı hesaplama</h1>
+    <h1>Hız Hesaplama</h1>
+    <input
+      type="number"
+      id="mesafe"
+      placeholder="İki Şehir Arasındaki Mesafe"
+    />
+    <input type="number" id="sure" placeholder="Ulaşmak İstediğiniz Süre" />
+    <button onclick="hesaplaHiz()">Hesapla</button>
+    <hr />
+    <h1>6-Döviz çevirici</h1>
+    <h1>Dolar > Euro</h1>
+    <input type="number" id="dolarSayisi" placeholder="Dolar Miktarını Girin" />
+    <button onclick="dovizCevirici()">Hesapla</button>
+    <hr />
+    <h1>7-Flash Bellek Boyutu Hesaplama</h1>
+    <h1>GB > MB</h1>
+    <input
+      type="number"
+      id="flashBellekGB"
+      placeholder="Belleği GB Cinsinden Belirtin"
+    />
+    <button onclick="bellekBoyutu()">Hesapla</button>
+    <hr />
+    <h1>8-Kalan parayı hesaplama</h1>
+    <input
+      type="number"
+      id="mevcutPara"
+      placeholder="Elinizdeki Para Miktarı"
+    />
+    <input type="number" id="chocolatePrice" placeholder="Çikolata Fiyatı" />
+    <button onclick="kalanParaHesaplama()">Hesapla</button>
+    <hr>
+    <h1>9-Sayıyı ters çevirerek gösterme (% mod alarak bulma yöntemi)</h1>
+    <input type="number" id="girilenSayi" placeholder="3 Basamaklı Bir Sayı Girin">
+    <button onclick="tersCevir()">Hesapla</button>
+    <hr>
+    <h1>10-Girilen sayının çift ya da tek olduğunu bulma</h1>
+    <input type="number" id="girilenSayi_2" placeholder="Bir Sayi Girin">
+    <button onclick="tekCift()">Hesapla</button>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
