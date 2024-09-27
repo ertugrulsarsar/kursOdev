@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Odev 3</title>
+  </head>
+  <body>
+    <h1>JavaScript Odev Bölüm 3</h1>
+    <h3>
+      Hangi görev için hangi dallanma operatörünün daha iyi olduğuna kendiniz
+      karar vermelisiniz: if, switch veya üçlü operatör.
+    </h3>
+    <hr />
+    <div>
+      <p>
+        1-Kullanıcıdan yaşını isteyin ve hangi yaş aralığında olduğunu
+        belirleyin: bebek (0–2), genç (12–18), yetişkin (18–60) veya emekli (60
+        ve üzeri).
+      </p>
+      <h3>If-Else Dallanma Operatörü</h3>
+      <label for="yas">Yaşınızı Girin:</label>
+      <!--Yaş girişi için etiket oluşturduk.-->
+      <input type="number" id="yas" placeholder="Yaşınızı Girin" min="0" />
+      <!--Kullanıcının yaşını girmesi için bir alan oluşturduk ve yaş sınırlamasına getirdik bunların dışındaki değerleri giremeyecektir.-->
+      <button id="kontrol">Kontrol Et</button>
+      <!--Kontrol et butonu-->
+      <p id="sonuc"></p>
+      <!--Sonucun gösterileceği alan (alert yerine tercih edilebilir.)-->
+    </div>
+    <hr />
+    <div>
+      <p>
+        2-Kullanıcıdan 0 ile 9 arasında bir sayı isteyin ve kullanıcıya bu tuşun
+        üzerindeki özel karakteri gösterin (1–!, 2–@, 3–# vb.)
+      </p>
+      <h3>Switch-Case Dallanma Operatörü</h3>
+      <label for="sayi">0 ile 9 arasında bir sayı girin:</label>
+      <input
+        class="sayiGenislik"
+        type="number"
+        id="sayi"
+        min="0"
+        max="9"
+        placeholder="0-9 arası sayı"
+      />
+      <button id="goster">Göster</button>
+      <p id="sonuc_2"></p>
+    </div>
+    <hr />
+    <div>
+      <p>
+        3-Kullanıcıdan üç basamaklı bir sayı isteyin ve içinde aynı rakamların
+        olup olmadığını kontrol edin.
+      </p>
+      <label for="sayi_2">Üç basamaklı sayı girin:</label>
+      <input
+        type="number"
+        id="sayi_2"
+        min="100"
+        max="999"
+        placeholder="100-999 arası sayı"
+      />
+      <button id="kontrol_2">Kontrol Et</button>
+      <p id="sonuc_3"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
