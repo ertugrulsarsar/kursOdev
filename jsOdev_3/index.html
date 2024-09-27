@@ -65,6 +65,46 @@
       <button id="kontrol_2">Kontrol Et</button>
       <p id="sonuc_3"></p>
     </div>
+    <div>
+        <p>
+            4-Kullanıcıdan bir yıl isteyin ve yılın artık yıl olup olmadığını
+            kontrol edin. Artık yıl ya 400'e bölünebilir ya da 4'e
+            bölünebilir ve aynı zamanda 100'e bölünemeyen yıldır.            
+        </p>
+        <label for="yil">Bir yıl girin:</label>
+        <input type="number" id="yil" placeholder="Yıl Girin">
+        <button id="kontrol_3">Kontrol Et</button>
+        <p id="sonuc_4"></p>
+    </div>
+    <div>
+        <p>
+            5-Kullanıcıdan beş basamaklı bir sayı isteyin ve onun bir
+            palindrom olup olmadığını belirleyin.
+        </p>
+        <label for="sayi_3">Beş Basamaklı Sayı Girin:</label>
+        <input type="number" id="sayi_3" min="10000" max="99999" placeholder="5 Basamaklı Sayı">
+        <button id="kontrol_4">Kontrol Et</button>
+        <p id="sonuc_5"></p>
+    </div>
+    <div>
+        <p>
+            6-Döviz dönüştürücü yazın. Kullanıcı TL miktarını girer,
+            dönüştürmek istediği para birimini seçer (EUR, USD veya
+            Rus Rublesi) ve karşılık gelen tutarı alır.
+            
+        </p>
+        <label for="donusum">TL Miktarı</label>
+        <input type="number" id="tl" placeholder="TL Miktarını Girin">
+
+        <label for="paraBirimi">Dönüştürmek İstediğiniz Para Birimi</label>
+        <select id="paraBirimi">
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+            <option value="RUS">RUS</option>
+        </select>
+        <button id="donusum">Dönüştür</button>
+        <p id="sonuc_6"></p>
+    </div>
 
     <script src="script.js"></script>
   </body>

@@ -90,3 +90,83 @@ document.getElementById("kontrol_2").addEventListener("click", function () {
       "Lütfen 3 Basamaklı sayı girin";
   }
 });
+
+
+// 4
+
+document.getElementById("kontrol_3").addEventListener("click", function(){
+    const yil = Number(document.getElementById("yil").value)
+
+    let artikYil =  (yil % 400 === 0) || (yil % 4 === 0 && yil % 100 !== 0)
+    // belirlenen bir hesaplama olduğu için önce hesaplamaları gerçekleştiren mantık önermelerini yazdım
+
+    if (artikYil) {
+        document.getElementById("sonuc_4").innerText = `${yil} bir artık yıldır`
+    }
+    else {
+        document.getElementById("sonuc_4").innerText = `${yil} bir artık yıl değildir`
+    }
+
+    //sonrada sonucun ya olumlu ya da olumsuz çıkacağını göstermek için if-else kullandım
+})
+
+
+// 5
+
+document.getElementById("kontrol_4").addEventListener("click", function () {
+    const sayi_3 = document.getElementById("sayi_3").value
+
+    //Beş basamaklı olup olmadıığını kontrol ediyoruz 
+
+    if (sayi_3.length === 5) {
+        //Palindrom kontrol
+        const palindromMu = sayi_3 === sayi_3.split('').reverse().join('')
+
+        if (palindromMu) {
+            document.getElementById("sonuc_5").innerText = `${sayi_3} bir palindrom sayıdır`
+        }
+        else {
+            document.getElementById("sonuc_5").innerText = `${sayi_3} bir palindrom sayı değildir`
+        }
+    }
+    else {
+        document.getElementById("sonuc_5").innerText = "Lütfen beş basamaklı bir sayı girin"
+    }
+})
+
+
+
+// 6 
+
+//önce dönüşüm oranlarını yazalım
+
+const donusumOranlari = {
+    EUR: 0.026,   //1 TL'nin karşılığı
+    USD: 0.029,
+    RUS: 2.71
+}
+
+document.getElementById("donusum").addEventListener("click", function(){
+    const tlMiktar = parseFloat(document.getElementById("tl").value) //kullanıcının girdiği TL miktarı
+    const secilenParaBirimi = document.getElementById("paraBirimi").value //secilen para birimi
+
+    //Geçerli bir miktar girildi mi?
+
+    if(isNaN(tlMiktar) || tlMiktar <= 0) {
+        document.getElementById("sonuc_6").innerText = `Lütfen geçerli bir TL miktarı girin`
+
+        return
+    }
+
+    //Donuştürme işlemi
+
+    const donusturulenMiktar = (tlMiktar * donusumOranlari[secilenParaBirimi]).toFixed(2)
+
+    document.getElementById("sonuc_6").innerText = `${tlMiktar} TL = ${donusturulenMiktar} ${secilenParaBirimi}`
+})
+
+
+// 7
+
+
+
