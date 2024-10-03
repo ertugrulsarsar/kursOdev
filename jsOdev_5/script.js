@@ -121,99 +121,113 @@ function mukemmelSayiDizi(minNumber, maxNumber) {
 }
 console.log(mukemmelSayiDizi(1, 999)); // Çıktı: [6,28,496] Toplamda 3 adet mükemmel sayı varmış.
 
-
 // 7
 
-function saatGoster (saat, dakika = 0, saniye = 0) {
-    const saatFormatted = String(saat).padStart(2, '0')
-    const dakikaFormatted = String(dakika).padStart(2, '0')
-    const saniyeFormatted = String(saniye).padStart(2, '0')
+function saatGoster(saat, dakika = 0, saniye = 0) {
+  if (saniye >= 60) {
+    dakika += Math.floor(saniye / 60); //eğer saniye 60dan büyükse saniyeyi 60'a böl ve dakikaya ekle dedim
+    saniye = saniye % 60; //saniyenin de 60'a bölümünden kalanını da saniyeye ekliyoruz. Bunların benzerini dk içinde yapıcam
+  }
+  if (dakika >= 60) {
+    saat += Math.floor(dakika / 60);
+    dakika = dakika % 60;
+  }
 
+  const saatFormatted = String(saat).padStart(2, "0");
+  const dakikaFormatted = String(dakika).padStart(2, "0");
+  const saniyeFormatted = String(saniye).padStart(2, "0");
 
-    const time = `${saatFormatted}:${dakikaFormatted}:${saniyeFormatted}`
+  const time = `${saatFormatted}:${dakikaFormatted}:${saniyeFormatted}`;
 
-
-    console.log(time)
+  console.log(time);
 }
 
-saatGoster(5)           //Çıktı: 05:00:00
-saatGoster(10,58,45)    //Çıktı: 10:58:45
-saatGoster(23,"",15)    //Çıktı: 23:00:15                 
-
+saatGoster(5); //Çıktı: 05:00:00
+saatGoster(10, 58, 45); //Çıktı: 10:58:45
+saatGoster(23, "", 15); //Çıktı: 23:00:15
+saatGoster(9,75,150);   //Çıktı: 
 
 // 8
 
-function zamanToSaniye (saat, dakika, saniye) {
-    const saatToSaniye = saat * 3600  // 1 saat 3600 saniye
-    const dakikaToSaniye = dakika * 60  // 1 dakika 60 saniye
-    const toplamSaniye = saatToSaniye + dakikaToSaniye + saniye // Toplam saniye
+function zamanToSaniye(saat, dakika, saniye) {
+  const saatToSaniye = saat * 3600; // 1 saat 3600 saniye
+  const dakikaToSaniye = dakika * 60; // 1 dakika 60 saniye
+  const toplamSaniye = saatToSaniye + dakikaToSaniye + saniye; // Toplam saniye
 
-    return(toplamSaniye)
+  return toplamSaniye;
 }
 
-console.log(zamanToSaniye(5,45,15))     //Çıktı: 20715 saniye
-console.log(zamanToSaniye(0,1,60))      //Çıktı: 120 Saniye
-console.log(zamanToSaniye(23,59,59))    //Çıktı: 86399 Saniye
-
+console.log(zamanToSaniye(5, 45, 15)); //Çıktı: 20715 saniye
+console.log(zamanToSaniye(0, 1, 60)); //Çıktı: 120 Saniye
+console.log(zamanToSaniye(23, 59, 59)); //Çıktı: 86399 Saniye
 
 // 9
 
-function saniyeToZaman (saniye) {
-    const saniyeToSaat = Math.floor(saniye / 3600) //saniyeyi saate çevir
-    saniye %= 3600  // kalan saniyeyi güncelle
-    const saniyeToDakika = Math.floor(saniye / 60)  //saniyeyi dakikaye çevir
-    saniye %= 60 // kalan saniyeyi güncelle
+function saniyeToZaman(saniye) {
+  const saniyeToSaat = Math.floor(saniye / 3600); //saniyeyi saate çevir
+  saniye %= 3600; // kalan saniyeyi güncelle
+  const saniyeToDakika = Math.floor(saniye / 60); //saniyeyi dakikaye çevir
+  saniye %= 60; // kalan saniyeyi güncelle
 
+  const saatFormatted = String(saniyeToSaat).padStart(2, "0");
+  const dakikaFormatted = String(saniyeToDakika).padStart(2, "0");
+  const saniyeFormatted = String(saniye).padStart(2, "0");
 
-    const saatFormatted = String(saniyeToSaat).padStart(2, '0')
-    const dakikaFormatted = String(saniyeToDakika).padStart(2, '0')
-    const saniyeFormatted = String(saniye).padStart(2, '0')
-
-    return `${saatFormatted}:${dakikaFormatted}:${saniyeFormatted}`
-
+  return `${saatFormatted}:${dakikaFormatted}:${saniyeFormatted}`;
 }
 
-console.log(saniyeToZaman(12548))       //Çıktı: 03:29:48
-console.log(saniyeToZaman(5483))        //Çıktı: 01:31:23
-console.log(saniyeToZaman(548))         //Çıktı: 00:09:08
-console.log(saniyeToZaman(12))          //Çıktı: 00:00:12
-console.log(saniyeToZaman(9))           //Çıktı: 00:00:09
-
+console.log(saniyeToZaman(12548)); //Çıktı: 03:29:48
+console.log(saniyeToZaman(5483)); //Çıktı: 01:31:23
+console.log(saniyeToZaman(548)); //Çıktı: 00:09:08
+console.log(saniyeToZaman(12)); //Çıktı: 00:00:12
+console.log(saniyeToZaman(9)); //Çıktı: 00:00:09
 
 // 10
 
-function zamanToSaniye (saat, dakika, saniye) {
-    const saatToSaniye = saat * 3600  // 1 saat 3600 saniye
-    const dakikaToSaniye = dakika * 60  // 1 dakika 60 saniye
-    const toplamSaniye = saatToSaniye + dakikaToSaniye + saniye // Toplam saniye
+function zamanToSaniye(saat, dakika, saniye) {
+  const saatToSaniye = saat * 3600; // 1 saat 3600 saniye
+  const dakikaToSaniye = dakika * 60; // 1 dakika 60 saniye
+  const toplamSaniye = saatToSaniye + dakikaToSaniye + saniye; // Toplam saniye
 
-    return(toplamSaniye)
+  return toplamSaniye;
 }
 
-function saniyeToZaman (saniye) {
-    const saniyeToSaat = Math.floor(saniye / 3600) //saniyeyi saate çevir
-    saniye %= 3600  // kalan saniyeyi güncelle
-    const saniyeToDakika = Math.floor(saniye / 60)  //saniyeyi dakikaye çevir
-    saniye %= 60 // kalan saniyeyi güncelle
+function saniyeToZaman(saniye) {
+  const saniyeToSaat = Math.floor(saniye / 3600); //saniyeyi saate çevir
+  saniye %= 3600; // kalan saniyeyi güncelle
+  const saniyeToDakika = Math.floor(saniye / 60); //saniyeyi dakikaye çevir
+  saniye %= 60; // kalan saniyeyi güncelle
 
+  const saatFormatted = String(saniyeToSaat).padStart(2, "0");
+  const dakikaFormatted = String(saniyeToDakika).padStart(2, "0");
+  const saniyeFormatted = String(saniye).padStart(2, "0");
 
-    const saatFormatted = String(saniyeToSaat).padStart(2, '0')
-    const dakikaFormatted = String(saniyeToDakika).padStart(2, '0')
-    const saniyeFormatted = String(saniye).padStart(2, '0')
-
-    return `${saatFormatted}:${dakikaFormatted}:${saniyeFormatted}`
-
+  return `${saatFormatted}:${dakikaFormatted}:${saniyeFormatted}`;
 }
 
-function zamanFark (birinciSaat,birinciDakika,birinciSaniye,ikinciSaat,ikinciDakika,ikinciSaniye) {
-    const birinciTarihToSaniye = zamanToSaniye(birinciSaat,birinciDakika,birinciSaniye)
+function zamanFark(
+  birinciSaat,
+  birinciDakika,
+  birinciSaniye,
+  ikinciSaat,
+  ikinciDakika,
+  ikinciSaniye
+) {
+  const birinciTarihToSaniye = zamanToSaniye(
+    birinciSaat,
+    birinciDakika,
+    birinciSaniye
+  );
 
-    const ikinciTarihToSaniye = zamanToSaniye(ikinciSaat,ikinciDakika,ikinciSaniye)
+  const ikinciTarihToSaniye = zamanToSaniye(
+    ikinciSaat,
+    ikinciDakika,
+    ikinciSaniye
+  );
 
-    const farkSaniye = Math.abs(ikinciTarihToSaniye - birinciTarihToSaniye)
+  const farkSaniye = Math.abs(ikinciTarihToSaniye - birinciTarihToSaniye);
 
-
-    return saniyeToZaman(farkSaniye)
+  return saniyeToZaman(farkSaniye);
 }
 
-console.log(zamanFark(12,15,54,3,21,17))    //Çıktı: 08:54:37
+console.log(zamanFark(12, 15, 54, 3, 21, 17)); //Çıktı: 08:54:37
