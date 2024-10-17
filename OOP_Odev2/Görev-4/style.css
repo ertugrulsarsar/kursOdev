@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif; /* Yazı tipi ayarı. */
+    margin: 20px; /* Sayfanın kenar boşlukları. */
+    background-color: #f9f9f9; /* Arka plan rengi. */
+}
+h1 {
+    color: #333; /* Başlık rengi. */
+}
+p {
+    margin: 5px 0; /* Paragraf için üst ve alt boşluk. */
+}
