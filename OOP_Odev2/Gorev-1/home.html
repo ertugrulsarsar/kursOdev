@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Alışveriş Listesi</title>
+  </head>
+  <body>
+    <h1>Alışveriş Listesi</h1>
+    <div class="container">
+        <input type="text" id="urunAd" placeholder="Ürün adı">
+        <input type="number" id="urunMiktar" placeholder="Miktar" min="1">
+        <button onclick="satinAlmaEkle()">Ürün Ekle</button>
+    </div>
+    <div class="container">
+        <input type="text" id="satinalAd" placeholder="Satın alunacak ürün adı">
+        <button onclick="urunSatinAl()">Satın al</button>
+    </div>
+    <h3>Alışveriş Listesi</h3>
+    <h4>Satın Alınmayan Ürünler</h4>
+    <ul id="satinAlinmayanlar"></ul>
+    <h4>Satın Alınan Ürünler</h4>
+    <ul id="satinAlinanlar"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>

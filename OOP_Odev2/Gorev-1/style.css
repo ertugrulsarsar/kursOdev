@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif; /* Sayfanın yazı tipi */
+    margin: 20px; /* Kenar boşlukları */
+    background-color: #f9f9f9; /* Arka plan rengi */
+}
+h1 {
+    color: #333; /* Başlık rengi */
+}
+.container {
+    margin-bottom: 20px; /* Alt alan boşluğu */
+}
+button {
+    padding: 10px; /* Butonun iç boşluğu */
+    background-color: #28a745; /* Butonun arka plan rengi */
+    color: white; /* Yazı rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Kenar yuvarlama */
+    cursor: pointer; /* İmleç değişimi */
+}
+button:hover {
+    background-color: #218838; /* Fareyle üzerine gelindiğinde arka plan rengi */
+}
+ul {
+    list-style-type: none; /* Madde işaretlerini kaldır */
+    padding: 0; /* İç boşluk sıfırla */
+}
+li {
+    padding: 5px 0; /* Madde arası boşluk */
+}
