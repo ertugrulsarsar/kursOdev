@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kalem Uygulaması</h1>
+      <label for="inkColor">Mürekkep Rengi:</label>
+      <input type="text" id="inkColor" placeholder="Örnek: blue" />
+
+      <label for="inkAmount">Mürekkep Miktarı (%):</label>
+      <input
+        type="text"
+        id="inkAmount"
+        min="0"
+        max="100"
+        placeholder="100"
+      /><br />
+
+      <label for="textToWrite">Yazmak İçin Metin:</label>
+      <input type="text" id="textToWrite" placeholder="Yazmak için metin" />
+
+      <button onclick="writeText()">Yaz</button>
+      <button onclick="refillPen()">Doldur</button>
+
+      <div id="result"></div>
+
+      <h3>Rengi değiştirmek için sayfayı yenileyin ve renk ismini yazın(ingilizce)</h3>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
