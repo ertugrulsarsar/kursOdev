@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Banka Çalışan Listesi</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">Banka Çalışan Listesi</div>
+      <form id="empForm">
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" id="firstName" required />
+            <div class="underline"></div>
+            <label for="">İsim</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" id="lastName" required />
+            <div class="underline"></div>
+            <label for="">Soyisim</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" id="position" required />
+            <div class="underline"></div>
+            <label for="">Pozisyon</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="number" id="salary" required />
+            <div class="underline"></div>
+            <label for="">Maaş</label>
+          </div>
+        </div>
+        <div class="form-row submit-btn">
+          <div class="input-data">
+            <div class="inner">
+              <input type="submit" value="Ekle" />
+            </div>
+          </div>
+        </div>
+      </form>
+      <table id="empTable" class="table table-hover">
+        <thead>
+          <tr>
+            <th>İsim</th>
+            <th>Soyisim</th>
+            <th>Pozisyon</th>
+            <th>Maaş</th>
+            <th>İşlem</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
