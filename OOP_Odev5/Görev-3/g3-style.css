@@ -1,0 +1,60 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aac4ab; /* Ekran arka plan rengi */
+}
+#field {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-image: url("https://cdn.pixabay.com/photo/2014/04/02/10/40/soccer-304171_960_720.png"); /* Arka plan görseli */
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#ball {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-image: url('https://w7.pngwing.com/pngs/304/342/png-transparent-football-sport-soccer-sports-equipment-sports-ball.png'); /* Top görseli */
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 50%;
+    transition: top 0.2s, left 0.2s;
+    overflow: hidden; /* Görselin alanın dışına çıkmasını engeller */
+  }
+
+  /* Rastgele oyuncuları temsil eden `player` stil tanımı */
+.player {
+    background-image: url('https://w7.pngwing.com/pngs/673/966/png-transparent-football-player-american-football-play-football-white-sport-sports-equipment.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 30px; /* Oyuncu genişliği */
+    height: 30px; /* Oyuncu yüksekliği */
+    background-color: blue; /* Oyuncu rengi */
+    border-radius: 50%; /* Yuvarlak oyuncu şekli */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Hafif gölge ekler */
+  }
+
+  #help-button {
+    position: absolute;
+    top: 10px;
+    right: 48%;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Üstte görünmesini sağlar */
+  }
