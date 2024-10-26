@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gorev1-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Görev 1</h1>
+      <p>
+        Bir kullanıcı adını girmek için bir HTML sayfası oluşturun. Her
+        kullanıcının girdiği karakteri kontrol etmek gereklidir. Eğer bir rakam
+        girdiyse, bunu input içinde göstermemek.
+      </p>
+      <div class="text-container">
+        <label for="textControl">Bir İsim Girin (İsimde Rakam Olamaz): </label>
+        <input
+          type="text"
+          id="textControl"
+          onkeydown="textControl(event)"
+          placeholder="Kontrol Edilecek Yazı"
+        />
+        <!--event parametresi eklendi-->
+        <div class="check-btn">
+          <button id="textControl-btn">Kontrol Et</button>
+        </div>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script src="gorev1-script.js"></script>
+  </body>
+</html>
