@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+li{
+    font-size: 20px;
+    margin: 20px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.dashed-line{
+    text-decoration:underline;
+    text-decoration-style:dotted;
+}
