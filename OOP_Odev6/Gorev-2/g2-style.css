@@ -1,0 +1,24 @@
+ul{
+    list-style-type: none;
+}
+ul ul{
+    margin-left: 20px;
+    display: none;
+}
+li{
+    margin: 5px 0;
+    cursor: pointer;
+    list-style-type: none;
+}
+.expandable::before{
+    content: "▶ ";
+    display: inline-block;
+    transition: transform 0.2 ease;
+}
+.expandable.expanded::before{
+    transform: rotate(90deg);
+}
+li:hover{
+    color: black;
+    font-weight: bold;
+}
