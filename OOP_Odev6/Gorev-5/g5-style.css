@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e8f0fe; /* Daha açık bir arka plan */
+    font-family: 'Arial', sans-serif;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+th, td {
+    border: 1px solid #007acc; /* Daha canlı bir kenar rengi */
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+}
+th {
+    background-color: #007acc; /* Canlı mavi */
+    color: white;
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+th:hover {
+    background-color: #005f8c; /* Daha koyu mavi */
+}
+tr:nth-child(even) {
+    background-color: #e0f7fa; /* Açık mavi */
+}
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Beyaz */
+}
+tr:hover {
+    background-color: #b2ebf2; /* Daha koyu açık mavi */
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
