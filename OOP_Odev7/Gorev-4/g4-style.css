@@ -1,0 +1,104 @@
+
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .article {
+            margin-bottom: 30px;
+        }
+        
+        /* Yorumlar Kutusu Stili */
+        .comment-box {
+            border-top: 2px solid #e0e4e8;
+            padding-top: 10px;
+            margin-top: 20px;
+        }
+        
+        .comment {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin-top: 15px;
+            background-color: #f9fafb;
+            border: 1px solid #e0e4e8;
+            border-radius: 8px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        .comment .username {
+            font-weight: bold;
+            color: #007acc;
+        }
+        
+        .comment .date {
+            color: #8a8d91;
+            font-size: 0.9em;
+            margin-top: -5px;
+        }
+        
+        /* Yorum Ekleme Formu Stili */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccd0d4;
+            border-radius: 6px;
+            font-size: 1em;
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+        
+        input[type="text"]:focus, textarea:focus {
+            border-color: #007acc;
+            outline: none;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #005a99;
+        }
+        
+        /* Yorum Fade-In Animasyonu */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
