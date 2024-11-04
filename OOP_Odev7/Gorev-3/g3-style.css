@@ -1,0 +1,71 @@
+/* Temel Sayfa Stilleri */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9fb;
+    color: #333;
+}
+
+/* Metin Alanı */
+#text {
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: color 0.4s ease, background-color 0.4s ease, transform 0.3s ease;
+    user-select: none;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Palet Alanı */
+.palette {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+/* Renk Hücreleri */
+.color-cell {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+.color-cell:hover {
+    transform: scale(1.2) translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Renk Ekle Düğmesi */
+#addColorButton {
+    padding: 12px 28px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6200ea;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 6px 12px rgba(98, 0, 234, 0.4);
+}
+#addColorButton:hover {
+    background-color: #3700b3;
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 16px rgba(98, 0, 234, 0.6);
+}
