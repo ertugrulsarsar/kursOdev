@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="g1-style.css" />
+  </head>
+  <body>
+    <form id="girisForm">
+      <h2>Kullanıcı Girişi</h2>
+      <label for="username">Kullanıcı Adı:</label>
+      <input type="text" id="username" required/><br><br>
+      <label for="password">Şifre:</label>
+      <input type="password" id="password" required/><br><br>
+      <label for="remember">Beni Hatırla</label>
+      <input type="checkbox" id="remember"><br><br>
+      <button type="button" onclick="logIn()">Giriş Yap</button>
+      <a href="#" id="forgotPassword">Şifremi Unuttum</a>
+      <p id="message"></p>
+    </form>
+   
+    <script src="g1-script.js"></script>
+  </body>
+</html>
