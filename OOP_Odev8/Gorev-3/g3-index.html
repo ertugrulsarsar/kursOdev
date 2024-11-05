@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="g3-style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="userAbout">
+        <label for="firstName">İsim:</label>
+        <input
+          type="text"
+          id="firstName"
+          placeholder="İsim girin"
+          required
+        /><br /><br />
+        <label for="lastName">Soyisim:</label>
+        <input
+          type="text"
+          id="lastName"
+          placeholder="Soyisim girin"
+          required
+        /><br /><br />
+        <label for="birthDay">Doğum Tarihi:</label>
+        <input type="date" id="birthDay" required /><br /><br />
+        <label for="gender">Cinsiyet:</label>
+        <select id="gender">
+          <option value="female">Kadın</option>
+          <option value="male">Erkek</option></select
+        ><br /><br />
+        <div class="skills">
+          <label for="skills">Yetenekler:</label>
+          <input type="checkbox" id="html" />
+          <label for="html">HTML</label>
+          <input type="checkbox" id="css" />
+          <label for="css">CSS</label>
+          <input type="checkbox" id="javaScript" />
+          <label for="javaScript">JavaScript</label>
+          <input type="checkbox" id="php" />
+          <label for="php">PHP</label>
+          <input type="checkbox" id="c++" />
+          <label for="c++">C++</label>
+          <input type="checkbox" id="java" />
+          <label for="java">JAVA</label>
+          <input type="checkbox" id="c#" />
+          <label for="c#">C#</label>
+        </div>
+        <button type="button" id="save">Kaydet</button>
+      </form>
+      <div class="output" id="output"></div>
+    </div>
+    <script src="g3-script.js"></script>
+  </body>
+</html>
