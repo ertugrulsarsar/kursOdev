@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+.container {
+    width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+textarea {
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    margin-top: 10px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+textarea:focus {
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+    font-size: 1em;
+}
+button:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: left; /* Varsayılan hizalama olarak left ayarlandı */
+}
+.result:hover {
+    transform: scale(1.05);
+}
+#styledText {
+    display: block;
+    text-align: inherit;
+    margin-top: 10px;
+}

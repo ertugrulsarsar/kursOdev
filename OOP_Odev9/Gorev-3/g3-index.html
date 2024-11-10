@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="g3-style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="textForm">
+            <div class="option">
+                <label><input type="checkbox" id="bold">Kalın</label>
+                <label><input type="checkbox" id="italic">İtalik</label>
+                <label><input type="checkbox" id="underline">Altı Çizili</label>
+                <label><input type="radio" name="align" value="left">Sola Hizala</label>
+                <label><input type="radio" name="align" value="justify">Ortala</label>
+                <label><input type="radio" name="align" value="right">Sağa Hizala</label>
+            </div>
+            <textarea id="userText" rows="4" placeholder="Metninizi buraya girin"></textarea>
+            <button type="button" onclick="displayText()">Metni Göster</button>
+        </form>
+        <div class="result" id="displayArea">
+            <strong>Sonuç:</strong>
+            <p id="styledText"></p>
+        </div>
+    </div>
+    <script src="g3-script.js"></script>
+</body>
+</html>
