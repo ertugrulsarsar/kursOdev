@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="g4-style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="orderForm">
+            <label for="book">Kitap Seçin:</label>
+            <select id="book" required>
+                <option value="Kitap A">Kitap A</option>
+                <option value="Kitap B">Kitap B</option>
+                <option value="Kitap C">Kitap C</option>
+            </select>
+            <label for="quantity">Adet:</label>
+            <input type="number" id="quantity" min="1" required>
+
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" required>
+
+            <label for="deliveryDate">Teslimat Tarihi:</label>
+            <input type="date" id="deliveryDate" required>
+
+            <label for="address">Teslimat Adresi:</label>
+            <textarea id="address" rows="3" required></textarea>
+
+            <label for="comments">Yorum:</label>
+            <textarea id="comments" rows="3"></textarea>
+
+            <button type="button" onclick="submitOrder()">Sipariş Gönder</button>
+        </form>
+        <div class="message" id="thankYouMessage"></div>
+    </div>
+    <script src="g4-script.js"></script>
+</body>
+</html>
