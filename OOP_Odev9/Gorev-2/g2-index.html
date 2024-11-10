@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="g2-style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="quizForm">
+            <div class="question" id="question1">
+                <p>1- "Merhaba" kelimesinde kaç adet harf bulunmaktadır</p>
+                <label><input type="radio" name="q1" value="7">7</label><br>
+                <label><input type="radio" name="q1" value="8">8</label><br>
+                <button type="button" onclick="showNextQuestion(2)">Sonraki Soru</button>
+            </div>
+
+            <div class="question" id="question2" style="display: none;">
+                <p>2- "Nova IT Academy" kaç adet kelimeden oluşur?</p>
+                <label><input type="radio" name="q2" value="4">4</label><br>
+                <label><input type="radio" name="q2" value="3">3</label><br>
+                <button type="button" onclick="showResult()">Sonucu Göster</button>
+            </div>
+            <div class="result" id="result">
+                Sonuc: <span id="correctCount">adet doğrunuz mevcut.</span>
+            </div>
+        </form>
+    </div>
+    <script src="g2-script.js"></script>
+</body>
+</html>
