@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Renk Paleti</h1>
+    <form class="color-form" id="colorForm">
+      <label for="colorName">Renk Adı:</label>
+      <input type="text" id="colorName" required />
+      <span id="nameError" class="error-message"></span>
+
+      <label for="colorType">Renk Tipi:</label>
+      <select id="colorType" required>
+        <option value="rgb">RGB</option>
+        <option value="rgba">RGBA</option>
+        <option value="hex">HEX</option>
+      </select>
+      <span id="typeError" class="error-message"></span>
+
+      <label for="colorvalue">Renk Değeri:</label>
+      <input
+        type="text"
+        id="colorValue"
+        placeholder="Örn: rgb(255,0,0) veya #ff0000"
+        required
+      />
+      <span id="valueError" class="error-message"></span>
+
+      <button type="button" onclick="addColor()">Renk Ekle</button>
+    </form>
+
+    <div class="color-palette" id="colorPalette">
+      <!-- Renk kutuları burada gösterilecek -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
