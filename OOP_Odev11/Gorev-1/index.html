@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Film-Dizi Sitesi</h1>
+    <form id="movieForm">
+        <label for="title">Başlık:</label>
+        <input type="text" id="title" name="title" placeholder="Film/Dizi Başlığını Girin">
+
+        <label for="tur">Tür:</label>
+        <select id="tur" name="tur">
+            <option value="movie">Film</option>
+            <option value="series">Dizi</option>
+            <option value="episode">Bölüm</option>
+        </select>
+
+        <button type="button" onclick="search()">Ara</button>
+    </form>
+
+    <div class="results" id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
