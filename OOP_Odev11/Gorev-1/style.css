@@ -1,51 +1,136 @@
+/* Genel gövde stili */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f5;
+  font-family: "Arial", sans-serif; /* Yazı tipini belirledik */
+  margin: 0; /* Varsayılan kenar boşluklarını kaldırdık */
+  padding: 0;
+  background: #141414; /* Arka plan rengini koyu yaptık */
+  color: #fff; /* Yazı rengini beyaz yaptık */
+  display: flex; /* Sayfa içeriğini ortaladık */
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Sayfanın minimum yüksekliğini ayarladık */
 }
+
+/* Ana içerik kutusu */
 .container {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
+  max-width: 1200px; /* İçeriğin genişliğini sınırladık */
+  width: 100%;
+  padding: 20px; /* İçeriğe kenar boşlukları ekledik */
+  text-align: left; /* Metni sola hizaladık */
 }
+
+/* Başlık stili */
 h1 {
-    text-align: center;
-    color: #333;
+  font-size: 2.5rem; /* Büyük yazı boyutu */
+  margin-bottom: 20px; /* Başlık altında boşluk */
+  color: #e50914; /* Netflix'in kırmızı rengi */
+  text-transform: uppercase; /* Harfleri büyük yaptık */
+  letter-spacing: 2px; /* Harfler arasında boşluk */
 }
-label {
-    display: block;
-    margin-top: 10px;
-    color: #555;
+
+/* Arama formu */
+form {
+  display: flex; /* Elemanları yatayda hizaladık */
+  gap: 10px; /* Aralarında boşluk */
+  margin-bottom: 30px; /* Altına boşluk */
 }
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+
+/* Giriş alanı */
+input[type="text"] {
+  flex: 1; /* Ekran genişliğine uyum sağlıyor */
+  padding: 10px;
+  border: none; /* Çerçeveyi kaldırdık */
+  border-radius: 5px; /* Kenarları yuvarladık */
+  font-size: 1rem;
+  color: #333; /* Yazı rengini koyu yaptık */
+  background: #fff; /* Beyaz arka plan */
+  outline: none; /* Tıklanınca çerçeve göstermemesi için */
 }
+
+/* Tür seçimi */
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #e50914; /* Kırmızı arka plan */
+  color: #fff; /* Beyaz yazı */
+}
+
+/* Butonlar */
 button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
+  padding: 10px 20px;
+  background: #e50914; /* Kırmızı arka plan */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Renk değişim animasyonu */
 }
+
 button:hover {
-    background-color: #45a049;
+  background: #f40612; /* Hover sırasında daha açık kırmızı */
 }
-.results {
-    margin-top: 20px;
+
+/* Film listesi */
+.movies {
+  display: flex;
+  flex-wrap: wrap; /* Elemanları sarar ve yeni satıra geçer */
+  gap: 15px; /* Aralarında boşluk */
+  justify-content: flex-start; /* Sola hizaladık */
 }
+
+/* Film kartları */
 .movie-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  background: #222; /* Koyu gri arka plan */
+  color: #fff;
+  width: calc(20% - 15px); /* Kart genişliği */
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden; /* Görsellerin taşmasını engelledik */
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05); /* Hafif büyüme efekti */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Gölge */
+}
+
+/* Görseller */
+.movie-poster {
+  width: 100%; /* Görsel genişliği kart genişliğine eşit */
+  height: 300px; /* Sabit yükseklik */
+  object-fit: cover; /* Görselin kesilmeden sığmasını sağladık */
+}
+
+/* Kart bilgisi */
+.movie-info {
+  padding: 10px; /* Bilgi kısmına iç boşluk ekledik */
+  text-align: center;
+}
+
+/* Sayfalama */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Düğmeler arasında boşluk */
+}
+
+.pagination button {
+  padding: 10px 15px;
+  background: #333; /* Koyu gri düğmeler */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+  background: #e50914; /* Hover sırasında kırmızı renk */
 }

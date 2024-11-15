@@ -7,22 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Film-Dizi Sitesi</h1>
-    <form id="movieForm">
-        <label for="title">Başlık:</label>
-        <input type="text" id="title" name="title" placeholder="Film/Dizi Başlığını Girin">
+    <div class="container">
+        <!-- Sayfa Başlığı -->
+        <h1>Film Arama</h1>
 
-        <label for="tur">Tür:</label>
-        <select id="tur" name="tur">
-            <option value="movie">Film</option>
-            <option value="series">Dizi</option>
-            <option value="episode">Bölüm</option>
-        </select>
+        <!-- Arama Formu -->
+        <form id="searchForm">
+            <!-- Kullanıcıdan film adı girişi -->
+            <input type="text" id="movieName" placeholder="Film adı girin" required>
+            
+            <!-- Film türü seçimi -->
+            <select id="type">
+                <option value="movie">Film</option>
+                <option value="series">Dizi</option>
+                <option value="episode">Bölüm</option>
+            </select>
+            
+            <!-- Arama butonu -->
+            <button type="submit">Ara</button>
+        </form>
 
-        <button type="button" onclick="search()">Ara</button>
-    </form>
+        <!-- Filmlerin listeleneceği alan -->
+        <div id="movieList" class="movies"></div>
 
-    <div class="results" id="results"></div>
-    <script src="script.js"></script>
+        <!-- Sayfalama düğmeleri -->
+        <div id="pagination" class="pagination"></div>
+
+        <!-- Film detaylarının gösterileceği alan -->
+        <div id="details" class="details" style="display: none;"></div>
+    </div>
+    <script type="module" src="js/app.js"></script> <!-- JavaScript dosyamızı bağladık -->
 </body>
 </html>
