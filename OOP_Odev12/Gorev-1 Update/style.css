@@ -1,0 +1,239 @@
+/* Genel gövde stili */
+body {
+  font-family: "Arial", sans-serif; /* Yazı tipini belirledik */
+  margin: 0; /* Varsayılan kenar boşluklarını kaldırdık */
+  padding: 0;
+  background: #141414; /* Arka plan rengini koyu yaptık */
+  color: #fff; /* Yazı rengini beyaz yaptık */
+  display: flex; /* Sayfa içeriğini ortaladık */
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Sayfanın minimum yüksekliğini ayarladık */
+}
+
+/* Ana içerik kutusu */
+.container {
+  max-width: 1200px; /* İçeriğin genişliğini sınırladık */
+  width: 100%;
+  padding: 20px; /* İçeriğe kenar boşlukları ekledik */
+  text-align: left; /* Metni sola hizaladık */
+}
+
+/* Başlık stili */
+h1 {
+  font-size: 2.5rem; /* Büyük yazı boyutu */
+  margin-bottom: 20px; /* Başlık altında boşluk */
+  color: #e50914; /* Netflix'in kırmızı rengi */
+  text-transform: uppercase; /* Harfleri büyük yaptık */
+  letter-spacing: 2px; /* Harfler arasında boşluk */
+}
+
+/* Arama formu */
+form {
+  display: flex; /* Elemanları yatayda hizaladık */
+  gap: 10px; /* Aralarında boşluk */
+  margin-bottom: 30px; /* Altına boşluk */
+}
+
+/* Giriş alanı */
+input[type="text"] {
+  flex: 1; /* Ekran genişliğine uyum sağlıyor */
+  padding: 10px;
+  border: none; /* Çerçeveyi kaldırdık */
+  border-radius: 5px; /* Kenarları yuvarladık */
+  font-size: 1rem;
+  color: #333; /* Yazı rengini koyu yaptık */
+  background: #fff; /* Beyaz arka plan */
+  outline: none; /* Tıklanınca çerçeve göstermemesi için */
+}
+
+/* Tür seçimi */
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #e50914; /* Kırmızı arka plan */
+  color: #fff; /* Beyaz yazı */
+}
+
+/* Butonlar */
+button {
+  padding: 10px 20px;
+  background: #e50914; /* Kırmızı arka plan */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Renk değişim animasyonu */
+}
+
+button:hover {
+  background: #f40612; /* Hover sırasında daha açık kırmızı */
+}
+
+/* Film listesi */
+.movies {
+  display: flex;
+  flex-wrap: wrap; /* Elemanları sarar ve yeni satıra geçer */
+  gap: 15px; /* Aralarında boşluk */
+  justify-content: flex-start; /* Sola hizaladık */
+}
+
+/* Film kartları */
+.movie-item {
+  background: #222; /* Koyu gri arka plan */
+  color: #fff;
+  width: calc(20% - 15px); /* Kart genişliği */
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden; /* Görsellerin taşmasını engelledik */
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05); /* Hafif büyüme efekti */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Gölge */
+}
+
+/* Görseller */
+.movie-poster {
+  width: 100%; /* Görsel genişliği kart genişliğine eşit */
+  height: 300px; /* Sabit yükseklik */
+  object-fit: cover; /* Görselin kesilmeden sığmasını sağladık */
+}
+
+/* Kart bilgisi */
+.movie-info {
+  padding: 10px; /* Bilgi kısmına iç boşluk ekledik */
+  text-align: center;
+}
+
+/* Sayfalama */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Düğmeler arasında boşluk */
+}
+
+.pagination button {
+  padding: 10px 15px;
+  background: #333; /* Koyu gri düğmeler */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.pagination button:hover {
+  background: #e50914; /* Hover sırasında kırmızı renk */
+}
+
+/* Modal genel düzen */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Koyu yarı şeffaf arka plan */
+  z-index: 1000;
+  overflow: hidden; /* Modalın taşmasını önler */
+}
+
+/* Modal içeriği */
+.modal-content {
+  background: #222; /* Koyu arka plan */
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 80%; /* Modalın genişliğini ekranın %80'iyle sınırla */
+  max-height: 80%; /* Modalın yüksekliğini ekranın %80'iyle sınırla */
+  overflow-y: auto; /* İçerik taşarsa kaydırma çubuğu ekle */
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+/* Modal kapatma düğmesi */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5); /* Hafif şeffaf bir arka plan */
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal kapatma düğmesi hover efekti */
+.close:hover {
+  background: rgba(255, 255, 255, 0.7); /* Açık gri arka plan */
+  color: #000; /* Siyah çarpı işareti */
+}
+
+/* Modal içeriğinde poster ve bilgiler */
+.modal-header {
+  display: flex;
+  flex-direction: row; /* Poster ve bilgiler yan yana */
+  gap: 20px;
+}
+
+.modal-poster {
+  width: 150px; /* Poster genişliği */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Poster için gölge */
+}
+
+.modal-info {
+  flex: 1; /* Bilgi kısmı genişler */
+}
+
+.modal-info h2 {
+  color: #e50914; /* Başlığı vurgulamak için kırmızı renk */
+  margin-bottom: 10px;
+}
+
+.modal-body {
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Yükleme simgesi */
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+/* Döndürme animasyonu */
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
