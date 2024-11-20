@@ -135,6 +135,31 @@ button:hover {
   background: #e50914; /* Hover sırasında kırmızı renk */
 }
 
+/* Daha Fazla Butonu (#moreButton) için CSS */
+#moreButton {
+  /* display: none; Başlangıçta gizli */
+  padding: 10px 20px; /* İç boşluk */
+  font-size: 16px; /* Yazı boyutu */
+  color: #fff; /* Yazı rengi */
+  background-color: #e50914; /* Arka plan rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 5px; /* Kenarları yuvarlat */
+  cursor: pointer; /* İmleç değişimi */
+  transition: background-color 0.3s ease; /* Hover animasyonu */
+}
+
+/* Hover efekti */
+#moreButton:hover {
+  background-color: #f40612; /* Daha açık kırmızı */
+}
+
+/* Buton devre dışıysa */
+#moreButton:disabled {
+  background-color: #555; /* Gri arka plan */
+  cursor: not-allowed; /* Devre dışı imleç */
+}
+
+
 /* Modal genel düzen */
 .modal {
   display: flex;
