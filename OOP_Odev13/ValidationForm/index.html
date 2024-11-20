@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="userForm">
+      <label
+        >Kullanıcı Adı:
+        <input type="text" name="username" />
+      </label>
+      <br />
+      <label
+        >Doğum Yılı:
+        <input type="number" name="birthYear" />
+      </label>
+      <br />
+      <label
+        >Göz Rengi
+        <select name="eyeColor">
+          <option value="brown">Kahverengi</option>
+          <option value="green">Yeşil</option>
+          <option value="gray">Gri</option>
+          <option value="blue">Mavi</option>
+        </select>
+      </label>
+      <br />
+      <label
+        >Saç Rengi
+        <select name="hairColor">
+          <option value="black">Siyah</option>
+          <option value="brown">Kahverengi</option>
+          <option value="white">Beyaz</option>
+          <option value="red">Kırmızı</option>
+          <option value="other">Diğer</option>
+        </select>
+      </label>
+      <br />
+      <label
+        >Boy (m):
+        <input type="number" name="height" step="0.01" />
+      </label>
+      <br />
+      <label
+        >Kilo (kg):
+        <input type="number" name="weight" />
+      </label>
+      <br />
+      <button type="submit">Gönder</button>
+    </form>
+    <div id="output"></div>
+    <script src="script.js"></script>
+     <!-- <script>
+        document.querySelector("#userForm").onsubmit = (event) => {
+      event.preventDefault(); // Sayfanın yenilenmesini engelle
+
+      // Form verilerini al
+      const form = event.target; // Form elementini al
+      const formData = new FormData(form);
+
+      // Çıkış alanını temizle
+      const output = document.getElementById("output");
+      output.innerHTML = ""; // Önceki çıktıları temizle
+
+      // Yeni bir blok oluştur
+      const resultDiv = document.createElement("div");
+      resultDiv.style.marginTop = "20px";
+      resultDiv.style.border = "1px solid #ccc";
+      resultDiv.style.padding = "10px";
+      resultDiv.style.backgroundColor = "#f9f9f9";
+
+      const title = document.createElement("h3");
+      title.textContent = "Submitted Data:";
+      resultDiv.appendChild(title);
+
+      // FormData verilerini göster
+      formData.forEach((value, key) => {
+        const dataDiv = document.createElement("p");
+        dataDiv.textContent = `${key}: ${value}`;
+        resultDiv.appendChild(dataDiv);
+      });
+
+      // Çıkışı DOM'a ekle
+      output.appendChild(resultDiv);
+
+      // Formu sıfırla
+      form.reset();
+    };
+     </script> -->
+  </body>
+</html>
