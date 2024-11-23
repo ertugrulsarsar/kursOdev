@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+#app {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Genel Stil */
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Kullanıcı Kaydı */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container input, .form-container button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Hesap Makinesi */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculator input, .calculator select, .calculator button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Stok Takip */
+#product-list-container {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.product-item {
+    @apply flex justify-between p-2 border-b last:border-none;
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
