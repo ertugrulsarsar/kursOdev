@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman İşlemleri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Zaman İşlemleri</h1>
+    <div id="timeDisplayContainer">
+        <p id="timeDisplay">00:00:00</p>
+    </div>
+    <div class="input-group">
+        <label for="seconds">Saniye Ekle:</label>
+        <input type="number" id="seconds">
+        <button onclick="modifyTime('seconds')">Ekle</button>
+    </div>
+    <div class="input-group">
+        <label for="minutes">Dakika Ekle:</label>
+        <input type="number" id="minutes">
+        <button onclick="modifyTime('minutes')">Ekle</button>
+    </div>
+    <div class="input-group">
+        <label for="hours">Saat Ekle:</label>
+        <input type="number" id="hours">
+        <button onclick="modifyTime('hours')">Ekle</button>
+    </div>
+    <script src="gorev3.js"></script>
+</body>
+</html>
