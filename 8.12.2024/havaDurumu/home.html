@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Hava Durumu</h1>
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Şehrinizi yazın">
+      <button id="searchBtn">Ara</button>
+    </div>
+
+    <!-- Current Weather Block -->
+    <div class="current-weather">
+      <h2>Şuan Hava Durumu</h2>
+      <div id="currentWeather">
+        <!-- Data will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- 5-Day Forecast Block -->
+    <div class="forecast">
+      <h2>5 Günlük Hava Durumu</h2>
+      <div id="fiveDayForecast">
+        <!-- Data will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
