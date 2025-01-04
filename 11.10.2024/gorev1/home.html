@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Araç Bilgi ve Zaman Hesaplama</h1>
+        <form id="aracForm">
+            <label for="marka">Araç Markası:</label>
+            <input type="text" id="marka" required>
+            
+            <label for="model">Araç Modeli:</label>
+            <input type="text" id="model" required>
+            
+            <label for="ortalamaHiz">Ortalama Hız (km/saat):</label>
+            <input type="number" id="ortalamaHiz" required>
+            
+            <label for="mesafe">Mesafe (km):</label>
+            <input type="number" id="mesafe" required>
+            
+            <button type="submit">Hesapla</button>
+        </form>
+        
+        <div id="output" class="output"></div>
+    </div>
+    <script src="gorev_1.js"></script>
+</body>
+</html>
